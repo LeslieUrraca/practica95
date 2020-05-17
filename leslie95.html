@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+  var jugador1 = {
+    nombre: 'Leslie',
+    puntos: 0,
+    imprimir: function() {
+      document.write('Nombre:'+this.nombre+'<br>');
+      document.write('Puntos:'+this.puntos+'<br>');
+    },
+    AumentarPuntos: function(cant) {
+      this.puntos=this.puntos+cant;
+    },
+    verificarsigano: function() {
+      if (this.puntos>1000)
+      {
+        document.write('Puntos ganados<br>');
+      }
+    }
+  };
+
+  jugador1.imprimir();
+  jugador1.AumentarPuntos(100);
+  jugador1.verificarsigano();
+  jugador1.AumentarPuntos(200);
+  jugador1.verificarsigano();  
+  jugador1.imprimir();
+</script>
+</body>
+</html>
